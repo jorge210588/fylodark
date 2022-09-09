@@ -1,0 +1,38 @@
+
+//Breakpoints
+$mobile-breakpoint: 375px;
+$desktop-breakpoint: 1440px;
+
+//Colors
+
+//Primary
+
+//(intro and email sign up background)
+$primary-dark-blue-intro: hsl(217, 28%, 15%);
+//(main background)
+$primary-dark-blue-main: hsl(218, 28%, 13%);
+//(footer background)
+$primary-dark-blue-footer: hsl(216, 53%, 9%);
+//(testimonials background)
+$primary-dark-blue-testimonials : hsl(219, 30%, 18%);
+
+//Accent
+
+//(inside call-to-action gradient)
+$accent-cyan : hsl(176, 68%, 64%);
+//(inside call-to-action gradient)
+$accent-blue : hsl(198, 60%, 50%);
+//(error)
+$accent-light-red : hsl(0, 100%, 63%);
+
+//Neutral
+
+$neutral-white: hsl(0, 0%, 100%);
+
+//Typography
+
+//Body Copy
+$body-font-size: 14px;
+
+//Headings, Call-to-actions, Header Navigation - Raleway //Body - open Sans
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap);
