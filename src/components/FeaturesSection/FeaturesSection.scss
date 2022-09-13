@@ -1,0 +1,30 @@
+@import '/src/variables.scss';
+
+.features-section{
+    background-color: $primary-dark-blue-main;
+    padding: 0px 270px;
+}
+
+.features-row{
+    display: flex;
+    gap: 150px;
+}
+
+.features-bottom-row{
+    margin-top:70px;
+}
+
+@media(max-width:$mobile-breakpoint){
+    .features-section{
+     padding: 0px 50px;
+    }
+
+    .features-row{
+        flex-direction: column;
+        gap:50px;
+    }
+
+    .features-bottom-row{
+        margin-top:50px;
+    }
+  }

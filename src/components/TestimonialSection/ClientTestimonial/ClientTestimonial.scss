@@ -1,0 +1,45 @@
+@import "/src/variables";
+
+.client-card{
+    background-color: $primary-dark-blue-testimonials;
+    margin-top: 10px;
+    padding: 40px 20px 20px 20px;
+    max-width: 290px;
+}
+
+.client-description{
+    color:$neutral-white;
+    font-family: $title-font;
+    font-size: $text-font-size;
+}
+
+.client-info{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.client-photo{
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+}
+
+.client-data{
+    color:$neutral-white;
+}
+
+.client-name{
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.client-position{
+    font-size: 10px;
+}
+
+@media(max-width:$mobile-breakpoint){
+    .client-card{
+     width: 100%;
+    }
+  }

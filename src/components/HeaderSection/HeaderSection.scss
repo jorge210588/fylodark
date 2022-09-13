@@ -1,0 +1,15 @@
+@import "/src/variables";
+
+.header{
+  background-color: $primary-dark-blue-intro;
+  height: 100px;
+  min-width: $mobile-breakpoint;
+  padding: 0px 50px;
+}
+
+@media (max-width:$mobile-breakpoint) {
+  .header{
+    height: 30px;
+    padding: 0px 20px;
+  }
+}

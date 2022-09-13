@@ -1,0 +1,129 @@
+@import '/src/variables.scss';
+
+.ga-grid-container {
+    display: grid;
+    grid-template-areas:
+    'ga-column-11 ga-content ga-column-21' 
+    'ga-column-12 ga-content ga-column-22';
+    grid-template-columns: 1fr 700px 1fr;
+    background-color:$primary-dark-blue-intro;
+    color:$neutral-white;
+    font-size: $text-font-size;
+    font-family: $text-font;
+  }
+
+  @mixin bg-row-1{
+    background-color: $primary-dark-blue-main;
+  }
+
+  @mixin bg-row-2{
+    background-color: $primary-dark-blue-footer;
+  }
+
+  .ga-column-11{
+    @include bg-row-1;
+    grid-area: ga-column-11;
+  }
+
+  .ga-column-12{
+    @include bg-row-2;
+    grid-area: ga-column-12;
+  }
+  .ga-content{
+    grid-area: ga-content;
+    padding: 30px 0px;
+    border-radius: 100px;
+    color:$neutral-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.ga-form{
+    display: flex;
+    gap:20px;
+    margin-top:30px;
+    height:40px;
+}
+
+.ga-input{
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: $title-font;
+    height: 40px;
+    width: 400px;
+    margin: auto;
+    padding-left: 25px;
+}
+
+.email-error-msg{
+  display: block;
+  color:#FF0000;
+  margin-left: 25px;
+  margin-top: 3px;
+}
+
+.ga-get-started-btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+}
+
+.ga-get-started-link{
+    background-color: $accent-blue;
+    border-radius: 50px;
+    color:$neutral-white;
+    font-family: $title-font;
+    font-size: $text-font-size;
+    padding-top: 13px;
+    height: 40px;
+    text-decoration: none;
+    width: 180px;
+  }
+
+  .ga-get-started-link:hover{
+    background-color: $accent-cyan;
+  }
+
+  .ga-title{
+    font-family: $title-font;
+    font-size:26px;
+    margin-bottom:15px;
+  }
+
+  .ga-description{
+      text-align: center;
+      max-width: 540px;
+  }
+
+  .ga-column-21{
+    @include bg-row-1;
+    grid-area: ga-column-21;
+  }
+  
+  .ga-column-22{
+    @include bg-row-2;
+    grid-area: ga-column-22;
+  }
+
+  @media(max-width:$mobile-breakpoint){
+    .ga-grid-container {
+      grid-template-columns: 1fr 320px 1fr;
+    }
+
+    .ga-content{
+      padding: 30px 10px;
+    }
+
+    .ga-form{
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    .ga-input,.ga-get-started-link{
+      width: 100%;
+    }
+  }

@@ -1,0 +1,123 @@
+@import '/src/variables.scss';
+
+.footer-header { grid-area: footer-header; }
+
+.location { 
+    display: flex; 
+    grid-area: location; 
+    line-height: 20px;
+    max-width: 300px;
+}
+
+.contact { 
+    display:flex;
+    flex-direction: column;
+    gap: 20px; 
+    grid-area: contact; 
+}
+
+@mixin footer-link {
+    display:flex;
+    flex-direction: column;
+    gap: 10px; 
+    
+    > a {
+        color:$neutral-white;
+        text-decoration: none;
+    }
+
+    > a:hover {
+        font-weight: bold;
+    }
+}
+
+.menu1 { 
+    @include footer-link;
+    
+    grid-area: menu1;
+}
+
+.menu2 { 
+    @include footer-link;
+    grid-area: menu2; 
+}
+
+.social {
+    display: flex;
+    gap:10px;
+    grid-area: social;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'footer-header footer-header footer-header footer-header footer-header'
+    'location contact menu1 menu2 social';
+  row-gap: 20px;
+  column-gap: 70px;
+  background-color: $primary-dark-blue-footer;
+  color:$neutral-white;
+  font-size: $text-font-size;
+  font-family: $text-font;
+  padding: 70px 140px 70px 140px;  
+}
+
+.flex-footer-item{
+    display: flex;
+}
+
+.icon-text{
+    height: 20px;
+    width: 20px;
+    margin-right: 30px;
+}
+
+.icon-contact{
+    height: 15px;
+    width: 18px;
+    margin-right: 20px;
+}
+
+.social-icon-border{
+    border:1px solid $neutral-white;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.social-icon{
+    width: 15px;
+    height: 15px;
+    margin-left: 6px;
+    margin-top:6px;
+}
+
+.social-icon-border:hover{
+    filter: invert(95%) sepia(95%) saturate(0%) hue-rotate(193deg) brightness(106%) contrast(106%);
+}
+
+@media(max-width:$mobile-breakpoint){
+    .grid-container {
+        grid-template-areas:
+          'footer-header'
+          'location'
+          'contact'
+          'menu1' 
+          'menu2' 
+          'social';
+        row-gap: 20px;
+        padding: 70px 30px 70px 30px;  
+      }
+
+      .menu1{
+          margin-top: 50px;
+      }
+
+      .menu2{
+        margin-top: 20px;
+    }
+
+    .social{
+        margin:50px auto 0px auto;
+    }
+  }

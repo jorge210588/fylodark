@@ -33,6 +33,10 @@ $neutral-white: hsl(0, 0%, 100%);
 
 //Body Copy
 $body-font-size: 14px;
+$text-font-size: 12px;
 
 //Headings, Call-to-actions, Header Navigation - Raleway //Body - open Sans
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap);
+
+$text-font:Open Sans, sans-serif;
+$title-font:Raleway, sans-serif;

@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import NavBar from "./NavBar/NavBar";
+import "./HeaderSection.scss";
 
 const HeaderSection = () => {
   return (
-    <div>HeaderSection</div>
-  )
-}
+    <header className="header">
+      <NavBar />
+    </header>
+  );
+};
 
-export default HeaderSection
+export default HeaderSection;
