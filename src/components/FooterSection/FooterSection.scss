@@ -93,7 +93,8 @@
 }
 
 .social-icon-border:hover{
-    filter: invert(95%) sepia(95%) saturate(0%) hue-rotate(193deg) brightness(106%) contrast(106%);
+    color:$accent-cyan;
+    border:1px solid $accent-cyan;
 }
 
 @media(max-width:$mobile-breakpoint){
@@ -108,7 +109,7 @@
         row-gap: 20px;
         padding: 70px 30px 70px 30px;  
       }
-
+      
       .menu1{
           margin-top: 50px;
       }
